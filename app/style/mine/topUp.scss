@@ -1,0 +1,151 @@
+@charset "utf-8";
+// sass 基础依赖
+@import '../basic/variables';
+@import '../basic/mixins';
+.topUp {
+    padding-bottom: 48px;
+}
+.topUp-top {
+    width: 375px;
+    height: 46px;
+    background: rgba(255, 255, 255, 1);
+    border-bottom: 1px solid #ebebeb;
+    padding: 16px 10px 0;
+    display: flex;
+    justify-content: space-between;
+    div {
+        color: #333333;
+        font-weight: bold;
+        font-size: 0;
+        position: relative;
+        :nth-child(1) {
+            border-bottom: 3px #5594fd solid;
+            width: 32px;
+            border: 1.5px solid #5594fd;
+            border-radius: 1.5px;
+            position: absolute;
+            bottom: 6px;
+        }
+        :nth-child(2) {
+            font-size: 16px;
+        }
+    }
+    span {
+        font-size: 14px;
+        color: #666666;
+    }
+}
+.topUp-content {
+    padding-bottom: 20px;
+    background: rgba(255, 255, 255, 1);
+
+    ul {
+        padding: 4px 0 15px 8px;
+        list-style: none;
+        font-size: 18px;
+        display: flex;
+        flex-wrap: wrap;
+        li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 11px 10px 0 1px;
+            border-radius: 5px;
+            img {
+                @include square(20px);
+            }
+            span {
+                margin-left: 5px;
+            }
+        }
+    }
+    .topUp-content-balance {
+        width: 355px;
+        height: 67px;
+        margin: auto;
+        font-size: 16px;
+        border-radius: 5px;
+        font-weight: 400;
+        color: #999999;
+        background: #f1f1f1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .topUp-content-balance-hide {
+            display: flex;
+            align-items: center;
+            height: 22px;
+            img {
+                @include square(20px);
+            }
+            span {
+                font-weight: bold;
+                color: #999999;
+                font-size: 18px;
+                margin-left: 5px;
+            }
+        }
+        .topUp-content-balance-show {
+            .topUp-content-balance-show-money {
+                position: relative;
+                height: 20px;
+                vertical-align: middle;
+                input {
+                    border: 0;
+                    background: #dae8ff;
+                    text-align: center;
+                    width: 65px;
+                    font-weight: bold;
+                    font-size: 18px;
+                    position: absolute;
+                    left: 0;
+                    padding: 0;
+                    padding-right: 20px;
+                }
+                span {
+                    font-weight: bold;
+                    color: #5594fd;
+                    font-size: 18px;
+                    position: absolute;
+                    right: 0;
+                }
+            }
+            .topUp-content-balance-show-tip {
+                text-align: center;
+                font-size: 14px;
+                margin-top: 6px;
+                font-weight: bold;
+            }
+        }
+    }
+    .topUp-content-balance-active {
+        background: #dae8ff;
+        border-radius: 5px;
+        color: #5594fd;
+    }
+}
+.topUp-content-li {
+    background: rgba(241, 241, 241, 1);
+    width: 172px;
+    height: 67px;
+}
+.topUp-content-li-active {
+    background: #dae8ff;
+    color: #5594fd;
+}
+.confirm-pay {
+    position: fixed;
+    width: 375px;
+    bottom: 0;
+    box-sizing: content-box;
+    padding: 16px 0;
+    display: table;
+    font-size: 18px;
+    color: #ffffff;
+    background: $default-color;
+    text-align: center;
+    div {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}

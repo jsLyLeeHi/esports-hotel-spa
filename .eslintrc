@@ -1,0 +1,32 @@
+{
+    "root": true,
+    "parserOptions": {
+        "sourceType": "module"
+    },
+    "env": {
+        "es6": true,
+        "browser": true,
+        "node": true
+    },
+    "extends": ["plugin:vue/essential", "prettier", "eslint:recommended", "plugin:prettier/recommended"],
+    "plugins": ["prettier", "vue"],
+    "rules": {
+        "no-console": 0,
+        "no-duplicate-case": 2,
+        "no-empty-function": 2,
+        "no-unreachable": 2,
+        "no-empty": 2,
+        "no-dupe-args": 2,
+        "no-else-return": 0,
+        "camelcase": 0,
+        "prettier/prettier": "error"
+    },
+    "globals": {
+        "GlobalUrl": true,
+        "HOST": true,
+        "document": true,
+        "localStorage": true,
+        "window": true,
+        "wx": true
+    }
+}

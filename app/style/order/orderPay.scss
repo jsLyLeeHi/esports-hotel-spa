@@ -1,0 +1,190 @@
+@charset "utf-8";
+@import '../basic/variables';
+@import '../basic/default';
+@import '../basic/mixins';
+
+.order-pay-header {
+    position: relative;
+    width: 100%;
+    height: 165px;
+    background: #fff url($bg-path+'order_pay@2x.png') no-repeat;
+    background-size: 375px, 135px;
+
+    .header-content {
+        position: absolute;
+        bottom: 0;
+        left: 15px;
+    }
+    .header-title {
+        color: #fff;
+        font-size: 20px;
+        padding: 10px;
+        .triangle-bottom {
+            @include css-arrow($size: 10px, $color: #fff, $direction: bottom);
+        }
+        .triangle-top {
+            @include css-arrow($size: 10px, $color: #fff, $direction: top);
+            margin-top: 10px;
+        }
+        .accommodation {
+            margin-left: 8px;
+            padding-left: 8px;
+            font-size: 14px;
+            color: #fff;
+            border-left: 1px solid #fff;
+        }
+    }
+    .header-price {
+        width: 345px;
+        height: 60px;
+        padding: 0 18px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1), -1px 0 5px rgba(0, 0, 0, 0.1);
+        font-size: 14px;
+        font-weight: 400;
+        color: #333;
+    }
+    .rebate-price {
+        font-size: 18px;
+        font-weight: bold;
+        color: #ff6481;
+        span {
+            font-size: 12px;
+            font-weight: normal;
+        }
+    }
+    .original-price {
+        color: #999;
+        text-decoration: line-through;
+    }
+}
+.order-pay-method {
+    width: 100%;
+    padding-top: 10px;
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+    .pay-item:last-child {
+        .item {
+            border-bottom: none;
+        }
+    }
+
+    .pay-item {
+        width: 100%;
+        height: 53px;
+        padding-left: 16px;
+        padding-right: 10px;
+        .icon {
+            margin-right: 15px;
+            img {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        .item {
+            flex: 1;
+            height: 100%;
+            padding-right: 5px;
+            border-bottom: 1px solid #ebebeb;
+        }
+        .option-img {
+            width: 24px;
+            height: 24px;
+            background: url($bg-path+'/choiceno@2x.png') no-repeat 0 0;
+            background-size: cover;
+        }
+        .option-active {
+            background: url($bg-path+'/choice@2x.png') no-repeat 0 0;
+            background-size: cover;
+        }
+    }
+}
+.order-pay-btn {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 48px;
+
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    .btn {
+        width: 100%;
+        height: 100%;
+    }
+    .pay-btn {
+        background-color: $default-color;
+    }
+    .expired-btn {
+        background-color: #b5b5b5;
+    }
+}
+
+.order-pay-ordermodal {
+    width: 375px;
+    color: #333;
+
+    .content {
+        .title {
+            width: 100%;
+            height: 25px;
+            line-height: 25px;
+            padding-left: 10px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .line {
+            width: 28px;
+            height: 3px;
+            background: $default-color;
+            border-radius: 2px;
+            margin-top: 4px;
+        }
+        .section {
+            max-height: 350px;
+            overflow: auto;
+            padding: 15px 10px;
+            font-size: 14px;
+
+            .item-title {
+                font-weight: bold;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            .item-content {
+                font-weight: 400;
+                color: #666;
+                div {
+                    margin-bottom: 8px;
+                }
+            }
+
+            .item {
+                font-weight: 400;
+                color: #666;
+                height: 30px;
+
+                .item-price {
+                    width: 140px;
+                    margin-left: 50px;
+                    flex-direction: row-reverse;
+                }
+                .pro-deleteprice {
+                    width: 80px;
+                    color: #999;
+                    text-decoration: line-through;
+                }
+                .pro-price {
+                    width: 60px;
+                    text-align: left;
+                }
+            }
+        }
+    }
+}

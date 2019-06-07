@@ -1,0 +1,139 @@
+@charset "utf-8";
+// sass 基础依赖
+@import '../basic/variables';
+@import '../basic/mixins';
+.invoice {
+    min-height: 100vh;
+    background: #ffffff;
+    color: #333333;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100vw;
+    overflow: hidden;
+    .invoice-title {
+        height: 65px;
+        width: 355px;
+        margin: 0 auto;
+        border-bottom: 1px solid #ebebeb;
+        display: flex;
+        align-items: center;
+        img {
+            @include square(20px);
+            margin-right: 8px;
+        }
+    }
+    .invoice-content {
+        width: 355px;
+        margin: 0 auto;
+        li {
+            height: 80px;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ebebeb;
+            max-width: 375px;
+            .invoice-content-item-enterprise,
+            .invoice-content-item-self {
+                width: 320px;
+                height: 75px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .invoice-content-item-enterprise-name {
+                    display: flex;
+                    align-items: center;
+                    .invoice-content-enterprise-name {
+                        max-width: 250px;
+                        @include line-clamp(1);
+                    }
+                }
+                .invoice-content-item-tallage {
+                    font-size: 14px;
+                    color: #666666;
+                    font-weight: 400;
+                    margin-top: 5px;
+                }
+                .invoice-content-item-enterprise-default {
+                    width: 29px;
+                    height: 17px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: #dae8ff;
+                    border-radius: 2px;
+                    color: #5594fd;
+                    font-size: 11px;
+                    font-weight: 400;
+                    margin-left: 5px;
+                }
+            }
+            .invoice-content-item-use {
+                color: #5594fd;
+                width: 40px;
+                height: 75px;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+            }
+            .invoice-content-item-hide {
+                position: absolute;
+                width: 180px;
+                height: 80px;
+                left: 375px;
+                display: flex;
+                justify-content: flex-start;
+                font-size: 16px;
+                font-weight: 400;
+                :first-child {
+                    width: 106px;
+                    height: 80px;
+                    background: #f1f1f1;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #999999;
+                }
+                :last-child {
+                    background: #f9414e;
+                    width: 72px;
+                    height: 80px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}
+.invoice-confirm-model {
+    width: 260px;
+    height: 155px;
+    background: #ffffff;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    .invoice-confirm-model-title {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .invoice-confirm-model-btn {
+        display: flex;
+        align-items: flex-end;
+        border-top: 1px solid #ebebeb;
+        div {
+            width: 130px;
+            height: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-right: 1px solid #ebebeb;
+        }
+        :last-child {
+            color: #5594fd;
+        }
+    }
+}

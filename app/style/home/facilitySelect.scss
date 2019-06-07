@@ -1,0 +1,208 @@
+@charset "utf-8";
+// sass 基础依赖
+@import '../basic/variables';
+@import '../basic/mixins';
+
+.facility {
+    background: #fff;
+    .facility-banner {
+        @include size(375px, 210px);
+        img {
+            @include size(375px, 210px);
+            display: block;
+        }
+        .van-swipe__indicator {
+            opacity: 1;
+            background: #e7e7e7;
+        }
+        .van-swipe__indicator--active {
+            background: $default-color;
+        }
+    }
+    .facility-list {
+        .facility-item {
+            margin: 0 10px;
+            border-bottom: 1px solid #ebebeb;
+            padding-bottom: 18px;
+            &:last-child {
+                border-bottom: none;
+            }
+            .facility-item-title {
+                margin: 18px 0;
+                font-size: 16px;
+                font-weight: 400;
+                color: #333;
+            }
+            .facility-item-box {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .facility-item-spec {
+                    li {
+                        margin-bottom: 6px;
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: #666;
+                    }
+                }
+                .facility-item-amount {
+                    background: #629cfd;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 91px;
+                    height: 30px;
+                    border-radius: 15px;
+                    .facility-item-amount-btn {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        @include square(25px);
+                        img {
+                            display: block;
+                            @include square(8px);
+                        }
+                    }
+                    .facility-item-amount-number {
+                        margin: 0 3px;
+                        width: 26px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        span {
+                            font-size: 14px;
+                            font-weight: 400;
+                            color: #fff;
+                        }
+                        border-left: 1px dotted #fff;
+                        border-right: 1px dotted #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.facility-modal {
+    width: 375px;
+    height: 390px;
+    overflow: scroll;
+    -webkit-overflow-scrolling: auto;
+    background: #fff;
+}
+.check-facility {
+    .check-facility-top {
+        padding: 0 10px;
+        .check-facility-top-msg {
+            .check-facility-top-arrow {
+                width: 42px;
+                height: 9px;
+                display: block;
+                margin: 10px auto 15px auto;
+            }
+            .check-facility-top-title {
+                margin: 11px 0;
+                font-size: 16px;
+                font-weight: bold;
+                color: #333;
+            }
+            .check-facility-banner-list {
+                @include size(355px, 199px);
+                img {
+                    @include size(355px, 199px);
+                    display: block;
+                    border-radius: 5px;
+                }
+                .van-swipe__indicators {
+                    left: 90%;
+                    .van-swipe__indicator {
+                        opacity: 1;
+                        background: #e7e7e7;
+                    }
+                    .van-swipe__indicator--active {
+                        background: $default-color;
+                    }
+                }
+            }
+            .check-facility-top-tips-list {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                padding-top: 10px;
+                .check-facility-top-tips-item {
+                    margin-bottom: 10px;
+                    display: flex;
+                    width: 33%;
+                    align-items: center;
+                    img {
+                        display: block;
+                        @include square(24px);
+                    }
+                    span {
+                        margin-left: 4px;
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: #666;
+                    }
+                }
+            }
+        }
+    }
+    .check-facility-msg-list {
+        margin-top: 20px;
+        padding: 0 10px;
+        display: flex;
+        flex-wrap: wrap;
+        .check-facility-msg-item {
+            display: flex;
+            width: 50%;
+            font-size: 0;
+            margin-bottom: 10px;
+            span {
+                &:first-of-type {
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #333;
+                }
+                &:last-of-type {
+                    margin-left: 5px;
+                    font-size: 16px;
+                    color: #666;
+                }
+            }
+        }
+    }
+    .check-facility-btn {
+        position: fixed;
+        bottom: 0;
+        width: 375px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 48px;
+        background: #629cfd;
+        span {
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+        }
+    }
+}
+.facility-btn-placeholder {
+    height: 48px;
+}
+.facility-btn {
+    width: 375px;
+    background: #629cfd;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    span {
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+    }
+}

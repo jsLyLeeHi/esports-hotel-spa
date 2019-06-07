@@ -1,0 +1,28 @@
+{
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "modules": false,
+                "targets": {
+                    "browsers": ["last 2 versions", "safari >= 7"]
+                }
+            }
+        ]
+    ],
+    "plugins": [
+        "@babel/plugin-transform-runtime",
+        "@babel/plugin-syntax-object-rest-spread",
+        "@babel/plugin-transform-object-assign",
+        "@babel/plugin-syntax-dynamic-import",
+        [
+            "import",
+            {
+                "libraryName": "vant",
+                "libraryDirectory": "es",
+                "style": true
+            },
+            "vant"
+        ]
+    ]
+}

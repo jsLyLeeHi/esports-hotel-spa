@@ -1,0 +1,50 @@
+@charset "utf-8";
+// sass 基础依赖
+@import '../basic/variables';
+@import '../basic/mixins';
+.activityCenter-no {
+    padding-top: 52px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+        @include size(245px, 216px);
+    }
+    div {
+        font-size: 14px;
+        color: #666666;
+        margin-top: 37px;
+    }
+}
+.activityCenter-item {
+    text-align: center;
+    .activityCenter-time {
+        text-align: center;
+        margin: 16px 0;
+        color: #999999;
+        font-size: 12px;
+    }
+    img {
+        width: 355px;
+        height: 150px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+    .activityCenter-title {
+        margin: 0 auto;
+        width: 355px;
+        height: 47px;
+        background-color: #ffffff;
+        display: flex;
+        align-items: center;
+        color: #333333;
+        font-size: 16px;
+        font-weight: bold;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        margin-top: -2px;
+    }
+    span {
+        margin-left: 8px;
+    }
+}

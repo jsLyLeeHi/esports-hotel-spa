@@ -1,0 +1,135 @@
+@charset "utf-8";
+// sass 基础依赖
+@import '../basic/variables';
+@import '../basic/mixins';
+.invoiceEdmit {
+    width: 100%;
+    min-height: 100vh;
+    background: #ffffff;
+    .invoiceEdmit-top {
+        width: 375px;
+        padding: 0 10px;
+        .invoiceEdmit-content {
+            height: 45px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            .invoiceEdmit-content-title {
+                font-weight: bold;
+                font-size: 16px;
+                color: #333333;
+                padding-bottom: 2px;
+            }
+            .invoiceEdmit-content-right {
+                width: 281px;
+                height: 45px;
+                padding-bottom: 2px;
+                border-bottom: 1px solid #ebebeb;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                font-size: 14px;
+                color: #666666;
+                .invoiceEdmit-content-right-choice {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                img {
+                    @include square(30px);
+                }
+                input {
+                    border: 0;
+                    text-align: right;
+                    font-size: 14px;
+                    width: 260px;
+                }
+            }
+        }
+    }
+    .invoiceEdmit-bot {
+        margin-top: 10px;
+        overflow: hidden;
+        div {
+            margin: 15px auto 0;
+            width: 355px;
+            height: 45px;
+            background: #5594fd;
+            color: #ffffff;
+            font-size: 17px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+        }
+    }
+    //新增页style
+    .invoiceEdmit-bot-active {
+        div {
+            background: #a9c9ff;
+            color: #ffffff;
+        }
+    }
+}
+.invoiceEdmit-default-on {
+    transform: translate(0, -3px);
+    width: 46px;
+    height: 22px;
+    background: $default-color;
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    i {
+        display: block;
+        @include square(16px);
+        background: #ffffff;
+        border-radius: 50%;
+        margin-left: 27px;
+    }
+}
+.invoiceEdmit-default-off {
+    transform: translate(0, -3px);
+    width: 46px;
+    height: 22px;
+    background: #666666;
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    i {
+        display: block;
+        @include square(16px);
+        background: #ffffff;
+        border-radius: 50%;
+        margin-left: 3px;
+    }
+}
+.invoiceAdd {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 15px;
+    padding: 1px 10px 10px;
+    color: #333333;
+    .invoiceAdd-item {
+        margin-top: 10px;
+        width: 173px;
+        height: 47px;
+        background-color: #f1f1f1;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        .invoiceApplyFor-active-item {
+            color: #999999;
+            font-size: 11px;
+            text-align: center;
+            margin-top: 5px;
+        }
+    }
+}
+.invoiceAdd-bottom {
+    height: 10px;
+    background: #f7f7f7;
+}

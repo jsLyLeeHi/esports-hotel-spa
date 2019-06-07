@@ -1,0 +1,169 @@
+@charset "utf-8";
+// sass 基础依赖
+@import '../basic/variables';
+@import '../basic/mixins';
+.orderRecord-no {
+    margin-top: 50%;
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: #999999;
+}
+.orderRecord {
+    list-style-type: none;
+    padding: 0;
+
+    .orderRecord-li {
+        margin-top: 10px;
+        height: 116px;
+        padding: 18px 15px 0 15px;
+        background: #ffffff;
+        .orderRecord-title {
+            height: 16px;
+            font-size: 16px;
+            font-weight: bold;
+            color: rgba(51, 51, 51, 1);
+            display: flex;
+            align-items: flex-start;
+            position: relative;
+            img {
+                @include square(10px);
+                margin-left: -5px;
+                margin-top: 2px;
+            }
+            span {
+                margin-left: 9px;
+            }
+            .orderRecord-title-wait,
+            .orderRecord-title-overdue,
+            .orderRecord-title-paid {
+                position: absolute;
+                width: 60px;
+                height: 23px;
+                right: 0;
+                font-size: 14px;
+                font-weight: 400;
+                text-align: center;
+            }
+            .orderRecord-title-wait {
+                color: $default-color;
+                background: #dae8ff;
+                border-radius: 5px;
+                line-height: 24px;
+            }
+            .orderRecord-title-overdue {
+                color: #999999;
+            }
+            .orderRecord-title-paid {
+                color: #4188fe;
+            }
+        }
+        .orderRecord-content {
+            margin-top: 7px;
+            height: 55px;
+            padding: 9px 0 10px 13px;
+            border-left: 1px dashed $default-color;
+            font-size: 14px;
+            color: rgba(102, 102, 102, 1);
+            .orderRecord-content-time {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 11px;
+            }
+        }
+    }
+}
+.orderDetail {
+    background-color: #ffffff !important;
+    .orderDetail-evaluation {
+        width: 345px;
+        margin: 25px auto 0;
+        .orderDetail-evaluation-p {
+            font-size: 16px;
+            color: #333333;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            :nth-child(2) {
+                font-size: 12px;
+                color: #999999;
+            }
+        }
+        .orderDetail-evaluation-content {
+            color: #666666;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 18px;
+            img {
+                @include square(20px);
+            }
+        }
+        textarea {
+            margin-top: 20px;
+            width: 345px;
+            height: 90px;
+            resize: none;
+            background: #f7f7f7;
+            border: 1px solid #ebebeb;
+            padding: 10px 8px;
+            box-sizing: border-box;
+        }
+        textarea::-webkit-input-placeholder {
+            font-size: 12px;
+            color: #999;
+        }
+        .orderDetail-evaluation-img {
+            width: 172px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .orderDetail-evaluation-content-text {
+            width: 80px;
+            transform: translate(-15px, 0);
+        }
+
+        .orderDetail-evaluation-success-text {
+            font-size: 12px;
+            color: #999999;
+            line-height: 1.8;
+            margin-top: 9px;
+        }
+    }
+}
+.orderDetail-evaluation-btn {
+    width: 345px;
+    height: 45px;
+    background: #5594fd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    color: #ffffff;
+    margin: 15px auto 0;
+}
+.orderRecord-detail {
+    height: 200px !important;
+    .orderRecord-detail-content {
+        position: relative;
+        img {
+            @include square(54px);
+            position: absolute;
+            right: 0;
+            top: -20px;
+        }
+        div {
+            font-size: 14px;
+            margin-bottom: 8px;
+            span {
+                font-size: 17px;
+                color: #ff6481;
+            }
+        }
+        .orderRecord-detail-content-overdue {
+            color: #333333;
+        }
+    }
+}

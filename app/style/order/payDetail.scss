@@ -1,0 +1,48 @@
+@charset "utf-8";
+@import '../basic/variables';
+@import '../basic/default';
+@import '../basic/mixins';
+
+.pay-detail {
+    width: 100%;
+    min-height: 100vh;
+    background: #f7f7f7 url($bg-path+'login_me@2x.png') no-repeat;
+    background-size: 375px, 160px;
+    overflow: hidden;
+    .pay-person {
+        margin-top: 33px;
+        padding-left: 30px;
+        font-size: 18px;
+        color: #fff;
+        .order-number {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    }
+    .pay-cotent {
+        width: 345px;
+        height: 278px;
+        margin: 16px auto;
+        padding-top: 20px;
+        padding-left: 15px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1), -1px 0 5px rgba(0, 0, 0, 0.1);
+        font-size: 14px;
+        font-weight: 400;
+        color: #333;
+        .em-color {
+            font-size: 18px;
+            color: #ff6481;
+        }
+        .go-home-btn {
+            width: 110px;
+            height: 35px;
+            margin: 30px auto 10px;
+            background-color: $default-color;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+@charset "utf-8";
+// sass 基础依赖
+@import '../basic/variables';
+@import '../basic/mixins';
+
+.aboutUs-contain {
+    background: #ffffff;
+    min-height: 100vh;
+}
+.aboutUs-img {
+    background-size: cover;
+    height: 160px;
+}
+.aboutUs-title {
+    width: 345px;
+    height: 83px;
+    border-radius: 5px;
+    padding: 22px 0 0 21px;
+    background: #ffffff;
+    margin: 0 auto;
+    transform: translate(0, -33px);
+    font-size: 0;
+    box-shadow: 0 2px 10px #f5f7fa;
+    :nth-child(1) {
+        display: inline-block;
+        border-bottom: 3px solid $default-color;
+    }
+    span {
+        font-size: 16px;
+        font-weight: bold;
+        color: #333333;
+        padding-bottom: 5px;
+    }
+    div {
+        font-size: 14px;
+        color: #666666;
+        margin-top: 8px;
+    }
+}
+.aboutUs-content {
+    background: #ffffff;
+    padding: 0 19px 0 16px;
+    font-size: 14px;
+    letter-spacing: 0.1px;
+    line-height: 24px;
+}
